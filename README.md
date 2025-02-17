@@ -1,66 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Mobile Otp Verify by Twilio  
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Tags 
 
-## About Laravel
+[![Laravel](https://img.shields.io/badge/Laravel-red.svg)](https://laravel.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)](https://www.javascript.com/)
+[![jQuery](https://img.shields.io/badge/jQuery-blue.svg)](https://jquery.com/)
+[![Toastr](https://img.shields.io/badge/Toastr-orange.svg)](https://github.com/CodeSeven/toastr)
+[![Twilio](https://img.shields.io/badge/Twilio-blue.svg)](https://www.twilio.com)
+[![intl-tel-input](https://img.shields.io/badge/intl--tel--input-green.svg)](https://github.com/jackocnr/intl-tel-input)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This project demonstrates how to implement mobile number verification using **Twilio** in a **Laravel** application. The user can:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Enter their mobile number.
+- Receive an OTP (One-Time Password) via SMS using **Twilio**.
+- Verify the OTP entered by the user.
+- Resend the OTP if needed.
+- Use **Toastr** for displaying real-time notifications to users.
 
-## Learning Laravel
+## Technologies Used  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Frontend** → HTML, CSS ,Blade Template, JavaScript, jQuery 
+- **Backend** → Laravel 
+- **Library** → Toastr, intl-tel-input (js library to format and validate international phone numbers)
+- **Package** → Twilio package
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+##  Requirements  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP **>=8.0**  
+- Laravel **v11.0**  
+- Composer  
+- Twilio Account  
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+##  Changes in Project  
 
-### Premium Partners
+- Set the Twilio Details inside `.env`:  
+    ```env
+    TWILIO_SID=AC78e4c76542d5fghhhdhd13ebe49f1
+    TWILIO_AUTH_TOKEN=7457dbhdiidhiddi5a5a798dddba79b56
+    TWILIO_PHONE_NUMBER=+162873737977
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Installation  
 
-## Contributing
+1. **Clone the repository**  
+    ```sh
+    git clone https://github.com/Subodhdhyani/mobile-otp-auth-twilio.git
+    cd mobile-otp-auth-twilio
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Install dependencies**  
+    ```sh
+    composer install
+    ```
 
-## Code of Conduct
+3. **Copy `.env.example` to `.env` and update environment variables**  
+    ```sh
+    cp .env.example .env
+    php artisan key:generate
+    ```
+    
+4. **Install Twilio package or SDK (Software Development Kit)**
+   ```sh
+   composer require twilio/sdk
+    ```  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Serve the application**  
+    ```sh
+    php artisan serve
+    ```
 
-## Security Vulnerabilities
+## Contributors  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- [Subodh Dhyani](https://github.com/subodhdhyani)  
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📸 Screenshots  
+
+
+[Initial Form](https://github.com/user-attachments/assets/7c18443a-aacb-4713-94cc-95fde65a297c)
+[OTP Send](https://github.com/user-attachments/assets/d1efd4f6-3685-4dc9-b168-383eb191f705)
+[Wrong OTP](https://github.com/user-attachments/assets/eb89d49f-f94e-4799-9fb4-45f40ed52e63)
+[Resend OTP](https://github.com/user-attachments/assets/7bce3238-76d7-4fd8-9cf7-04f72d3a5b25)
+
+
+
